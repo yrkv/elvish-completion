@@ -224,6 +224,8 @@ default-meta = [
         }
         key = ($meta[get-key] $candidate $meta)
         make-complex-candidate $key $candidate $meta
+      } elif (has-key $candidate "style") { # crappy way to check if it's already a complex-candidate
+        put $candidate
       }
     }
   }
