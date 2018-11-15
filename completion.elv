@@ -4,6 +4,9 @@ use github.com/yrkv/elvish-completion/completion
 debug = $false
 
 fn complete [list @cmd]{
+  if (< (count $list) 1) {
+    return
+  }
   arg = $cmd[0]
   current = $list[0]
   original-current = $current
@@ -167,7 +170,7 @@ default-meta = [
   &multiple=      $false
   &optional=      $false
 
-  &complete-options-on-dash= $false
+  &complete-options-on-dash= $true
 
   &alternatives=  [&]
 
