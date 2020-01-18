@@ -37,10 +37,10 @@ tree = [
               &presel_feedback_color=" #RRGGBB"
             ]
           ]
-          &normal_border_color=           [arg]{ put (re:replace "##" '#' "#"$arg) }
-          &active_border_color=           [arg]{ put (re:replace "##" '#' "#"$arg) }
-          &focused_border_color=          [arg]{ put (re:replace "##" '#' "#"$arg) }
-          &presel_feedback_color=         [arg]{ put (re:replace "##" '#' "#"$arg) }
+          &normal_border_color=           [arg]{ re:replace "##" '#' "#"$arg }
+          &active_border_color=           [arg]{ re:replace "##" '#' "#"$arg }
+          &focused_border_color=          [arg]{ re:replace "##" '#' "#"$arg }
+          &presel_feedback_color=         [arg]{ re:replace "##" '#' "#"$arg }
           &split_ratio=                   []
           &status_prefix=                 []
           &external_rules_command=        []
